@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake-test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #252526;
+            color: #d4d4d4;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e1e1e;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .luogu-btn {
+            padding: 6px 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .luogu-btn:hover {
+            background-color: #3498db;
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 80px;
+            background-color: #252526;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .sidebar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 4px;
+            width: 60px;
+            text-align: center;
+        }
+
+        .sidebar-item:hover {
+            background-color: #2a2d2e;
+        }
+
+        .sidebar-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-label {
+            font-size: 12px;
+        }
+
+        .content {
+            flex: 1;
+            background-color: #1e1e1e;
+            padding: 20px 20px 20px 40px;
+        }
+
+        .content h1, .content h3 {
+            margin-left: 20px;
+            max-width: 800px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">Snake-test</div>
+        <button class="luogu-btn" id="luogu-team-btn">洛谷团队</button>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-item" id="editor-link">
+                <div class="sidebar-icon"><i class="fas fa-laptop-code"></i></div>
+                <div class="sidebar-label">编辑器</div>
+            </div>
+            <div class="sidebar-item" id="game-link">
+                <div class="sidebar-icon"><i class="fas fa-gamepad"></i></div>
+                <div class="sidebar-label">小游戏</div>
+            </div>
+            <div class="sidebar-item" id="links-link">
+                <div class="sidebar-icon"><i class="fas fa-link"></i></div>
+                <div class="sidebar-label">链接</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- 主内容区 -->
+            <h1>Welcome!</h1>
+            <h3>欢迎来到Snake-test！本网站由zhangyimin12345制作，供snake集团成员使用。</h3>
+            <h3>用于本人是个HTML辣鸡，有什么建议欢迎提出！</h3>
+            <h3>本网站的主要功能都在侧边栏里。</h3>
+            <h3>注：小游戏·跑酷炸了，还没修好。有些地方缺斤少两，慢慢修吧。</h3>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('editor-link').addEventListener('click', function() {
+            window.open('https://zhangyimin12345.github.io/snake-test-code/', '_blank');
+        });
+        
+        document.getElementById('game-link').addEventListener('click', function() {
+            window.open('https://zhangyimin12345.github.io/snake-test-game/', '_blank');
+        });
+        
+        document.getElementById('links-link').addEventListener('click', function() {
+            window.open('https://zhangyimin12345.github.io/snake-test-links/', '_blank');
+        });
+
+        // 添加洛谷团队按钮点击事件
+        document.getElementById('luogu-team-btn').addEventListener('click', function() {
+            window.open('https://www.luogu.com.cn/team/98666', '_blank');
+        });
+    </script>
+</body>
+
+</html>
